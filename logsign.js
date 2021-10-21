@@ -1,9 +1,9 @@
-`node --trace-deprecation ...`
+
 require('dotenv').config();
 const express = require('express')
 const bcrypt = require('bcrypt');
 const app = express();
-const server = require("http").createServer(app);
+//const server = require("http").createServer(app);
 const cors = require('cors')
 const parser = require('cookie-parser');
 const db = require('./dbCon');
@@ -298,6 +298,6 @@ if (process.env.NODE_ENV == "production") {
         res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
     })
 }
-server.listen(port, '127.0.0.1', (err) => {
+app.listen(port, (err) => {
     console.log(`at ${port}`)
 })
