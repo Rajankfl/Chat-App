@@ -281,11 +281,11 @@ app.get('/logout', (req, res) => {
 
 
 
-//addData();
+/*addData();
 app.get('/', (req, res) => {
     res.end('hello done')
 })
-
+*/
 app.get("/about", Authenticate, (req, res) => {
     //res.send(req.headers.cookie)
     res.send(req.rootUser)
