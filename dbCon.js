@@ -2,7 +2,7 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const password= process.env.password;
 const connect = () => {
-    //mongodb+srv://RajanKfl:MongoDBMERN@1stproj@cluster0.egfg1.mongodb.net/vsdata?retryWrites=true&w=majority
+    
     mongoose.connect(process.env.DATABASE, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
